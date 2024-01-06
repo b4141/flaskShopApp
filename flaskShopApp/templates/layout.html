@@ -9,7 +9,10 @@
       {% endif %}
     </title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/> 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/leaf-solid-24.png') }}">
+
   </head>
   <body>
 
@@ -21,7 +24,7 @@
           </a>
         </div>
         <div class="search-bar-container">
-          <input type="text" placeholder="search for any product...">
+          <input type="text" placeholder="&#xF002;  search for any product..." style="font-family: Roboto, FontAwesome">
         </div>
         <div class="cart-container">
           <div class="cart-wrapper">

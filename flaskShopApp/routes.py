@@ -38,77 +38,77 @@ allProducts = [
         "id": "1",
         "name": "product 1",
         "description": "this is product number 1",
-        "img": "p1.jpg",
+        "img": "p1.png",
         "price": 10
     },
     {
         "id": "2",
         "name": "product 2",
         "description": "this is product number 2",
-        "img": "p2.jpg",
+        "img": "p2.png",
         "price": 20
     },
     {
         "id": "3",
         "name": "product 3",
         "description": "this is product number 3",
-        "img": "p3.jpg",
+        "img": "p3.png",
         "price": 30
     },
     {
         "id": "4",
         "name": "product 4",
         "description": "this is product number 4",
-        "img": "p4.jpg",
+        "img": "p4.png",
         "price": 40
     },
     {
         "id": "5",
         "name": "product 5",
         "description": "this is product number 5",
-        "img": "p5.jpg",
+        "img": "p5.png",
         "price": 50
     },
     {
         "id": "6",
         "name": "product 6",
         "description": "this is product number 6",
-        "img": "p6.jpg",
+        "img": "p6.png",
         "price": 60
     },
     {
         "id": "7",
         "name": "product 7",
         "description": "this is product number 7",
-        "img": "p7.jpg",
+        "img": "p7.png",
         "price": 70
     },
     {
         "id": "8",
         "name": "product 8",
         "description": "this is product number 8",
-        "img": "p8.jpg",
+        "img": "p8.png",
         "price": 80
     },
     {
         "id": "9",
         "name": "product 9",
         "description": "this is product number 9",
-        "img": "p9.jpg",
+        "img": "p9.png",
         "price": 90
     },
     {
         "id": "10",
         "name": "product 10",
         "description": "this is product number 10",
-        "img": "p10.jpg",
+        "img": "p10.png",
         "price": 100
     },
     {
         "id": "11",
         "name": "product 11",
         "description": "this is product number 11",
-        "img": "p11.jpg",
+        "img": "p11.png",
         "price": 110
     }
 ]

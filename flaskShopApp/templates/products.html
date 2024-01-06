@@ -13,9 +13,26 @@
   </div>
 
 
-  {% for product in products %}
-    {{ product.name }}
-  {% endfor %}
+  <div class="products-wrapper">
+
+    {% for product in products %}
+      <div class="product-container">
+        <img src="{{ url_for('static', filename='productImg/'+product.img) }}" alt="product-image">
+        <div class="product-info">
+          <div class="product-name">
+            {{ product.name }}
+          </div>
+          <div class="product-description">
+            {{ product.description }}
+          </div>
+          <div class="product-price">
+            $ {{ product.price }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
 
   
 {% endblock content %}
