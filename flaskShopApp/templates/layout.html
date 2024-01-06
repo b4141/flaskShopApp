@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {% if title %}
+        {{ title }}
+      {% else %}
+        flaskShopApp
+      {% endif %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+
+    <div class="app-wrapper">
+      <div class="navbar-container">
+      </div>
+      <div class="content-wrapper">
+        {% block content %}{% endblock content %}
+      </div>
+    </div>
+
+    <!--
+    <script>
+    </script>
+    <script src="{{ url_for('static', filename='js/') }}"></script>
+    -->
+  </body>
+</html>
