@@ -38,77 +38,99 @@ allProducts = [
         "id": "1",
         "name": "product 1",
         "description": "this is product number 1",
-        "img": "p1.png",
+        "imgs": ["p1.png"],
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "rating": 3,
         "price": 10
     },
     {
         "id": "2",
         "name": "product 2",
         "description": "this is product number 2",
-        "img": "p2.png",
+        "imgs": ["p2.png"],
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "rating": 5,
         "price": 20
     },
     {
         "id": "3",
         "name": "product 3",
         "description": "this is product number 3",
-        "img": "p3.png",
+        "imgs": ["p3.png"],
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "rating": 5,
         "price": 30
     },
     {
         "id": "4",
         "name": "product 4",
         "description": "this is product number 4",
-        "img": "p4.png",
+        "imgs": ["p4.png"],
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "rating": 5,
         "price": 40
     },
     {
         "id": "5",
         "name": "product 5",
         "description": "this is product number 5",
-        "img": "p5.png",
+        "imgs": ["p5.png"],
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "rating": 5,
         "price": 50
     },
     {
         "id": "6",
         "name": "product 6",
         "description": "this is product number 6",
-        "img": "p6.png",
+        "imgs": ["p6.png"],
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "rating": 5,
         "price": 60
     },
     {
         "id": "7",
         "name": "product 7",
         "description": "this is product number 7",
-        "img": "p7.png",
+        "imgs": ["p7.png"],
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "rating": 5,
         "price": 70
     },
     {
         "id": "8",
         "name": "product 8",
         "description": "this is product number 8",
-        "img": "p8.png",
+        "imgs": ["p8.png"],
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "rating": 5,
         "price": 80
     },
     {
         "id": "9",
         "name": "product 9",
         "description": "this is product number 9",
-        "img": "p9.png",
+        "imgs": ["p9.png"],
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "rating": 5,
         "price": 90
     },
     {
         "id": "10",
         "name": "product 10",
         "description": "this is product number 10",
-        "img": "p10.png",
+        "imgs": ["p10.png"],
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "rating": 5,
         "price": 100
     },
     {
         "id": "11",
         "name": "product 11",
         "description": "this is product number 11",
-        "img": "p11.png",
+        "imgs": ["p11.png"],
+        "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "rating": 5,
         "price": 110
     }
 ]
