@@ -1,4 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
-  all products
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }}">
+
+
+  <div class="header">
+    <div class="header-primary">
+      we provide the best beauty products
+    </div>
+    <div class="header-secondary">
+      these are the latest products added to our shop
+    </div>
+  </div>
+
+
+  {% for product in products %}
+    {{ product.name }}
+  {% endfor %}
+
+  
 {% endblock content %}

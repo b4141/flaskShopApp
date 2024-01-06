@@ -8,12 +8,26 @@
         flaskShopApp
       {% endif %}
     </title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
   <body>
 
     <div class="app-wrapper">
       <div class="navbar-container">
+        <div class="logo-container">
+          <a href="{{ url_for('index') }}">
+            <i class='bx bxs-leaf'></i>
+          </a>
+        </div>
+        <div class="search-bar-container">
+          <input type="text" placeholder="search for any product...">
+        </div>
+        <div class="cart-container">
+          <div class="cart-wrapper">
+            <i class='bx bxs-shopping-bag'></i>
+          </div>
+        </div>
       </div>
       <div class="content-wrapper">
         {% block content %}{% endblock content %}

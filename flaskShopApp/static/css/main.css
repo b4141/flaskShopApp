@@ -1,0 +1,121 @@
+:root {
+  --bg-bg-color: #e6e6e6;
+  --bg-color: #ebeaef;
+  --bg-prev-color: #ffffff;
+  --text-color-primary: #1d1c1c;
+  --text-color-secondary: #6c6c6c;
+  --border-radius: 10px;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-bg-color);
+  font-family: sans-serfi;
+  color: var(--text-color-primary);
+  display: grid;
+  place-items: center;
+}
+
+.app-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+}
+
+.navbar-container {
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  // background-color: black;
+  box-shadow: 0px 10px 50px -20px #00000010;
+}
+
+.logo-container {
+  font-size: 3em;
+  // background-color: red;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.logo-container a {
+  color: var(--text-color-primary);
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  left: 30px;
+}
+
+.search-bar-container {
+  // background-color: orange;
+  min-width: 500px;
+  display: grid;
+  place-items: center;
+}
+
+.search-bar-container input {
+  background-color: var(--bg-prev-color);
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.25em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+
+::placeholder {
+  color: var(--text-color-secondary);
+}
+
+
+.cart-container {
+  // background-color: blue;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.cart-wrapper {
+  position: absolute;
+  right: 30px;
+  right: 30px;
+  background-color: var(--bg-prev-color);
+  font-size: 1.5em;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius);
+  display: grid;
+  place-items: center;
+}
+
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  // background-color: green;
+  margin-top: 3em;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    // background-color: gray;
+  }
+
+  .navbar-container {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // background-color: black;
+  }
+
+  .logo-container {
+    display: none;
+  }
+}

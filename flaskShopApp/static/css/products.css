@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 2em;
+  padding-bottom: 3em;
+}
+
+.header-primary {
+  color: var(--text-color-primary);
+  font-size: 1.7em;
+}
+
+.header-secondary {
+  color: var(--text-color-secondary);
+  font-size: 1.2em;
+}
