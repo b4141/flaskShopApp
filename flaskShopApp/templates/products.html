@@ -16,7 +16,7 @@
   <div class="products-wrapper">
 
     {% for product in products %}
-      <div class="product-container">
+      <div class="product-container" onclick="navigateToProductPage('{{ product.id }}')">
         <img src="{{ url_for('static', filename='productImg/'+product.img) }}" alt="product-image">
         <div class="product-info">
           <div class="product-name">
@@ -34,5 +34,10 @@
 
   </div>
 
+  <script>
+    function navigateToProductPage(productId){
+      window.location.href=`${window.location.origin}/productPage/${productId}`
+    }
+  </script>
   
 {% endblock content %}
