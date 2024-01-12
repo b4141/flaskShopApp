@@ -70,8 +70,8 @@ allProducts = [
     {
         "id": "4",
         "name": "Unlocked",
-        "description": "Instant Extensions Mascara",
-        "imgs": ["p4-2.png"],
+        "description": "Instant Extensions Mascara from HOURGLASS",
+        "imgs": ["p4-1.png", "p4-2.png"],
         "fullDescription": "The look of lash extensions in an instant. This mascara is the ultimate formula for when more is more: more definition, more lift and more length to transform lashes with impossibly real results. Using film-forming technology, it coats each lash in lightweight fibers that lock in place for a high-impact, fanned-out finish and smudge-proof wear.",
         "rating": 3,
         "price": 40.99,

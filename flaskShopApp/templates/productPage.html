@@ -5,7 +5,18 @@
   <div class="product-wrapper">
 
     <div class="img-container">
-      <img src="{{ url_for('static', filename='productImg/'+product.imgs[0]) }}" alt="product-image">
+      <img id="product-img-display" src="{{ url_for('static', filename='productImg/'+product.imgs[0]) }}" alt="product-image">
+      <div class="img-selector-container">
+        {% if product.imgs|length > 1 %}
+          {% for img in product.imgs %}
+            {% if loop.index == 1 %}
+                <div class="img-selector" id="img-selector-{{ loop.index }}" onclick="showImg('img-selector-{{ loop.index }}', `{{ url_for('static', filename='productImg/'+img) }}`)" style="background-color: var(--text-color-primary);"></div>
+              {% else %}
+                <div class="img-selector" id="img-selector-{{ loop.index }}" onclick="showImg('img-selector-{{ loop.index }}', `{{ url_for('static', filename='productImg/'+img) }}`)"></div>
+              {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
     </div>
 
     <div class="shop-info-container">
@@ -72,6 +83,18 @@
         productDescriptionButton.style = "border-bottom: 2px solid var(--text-color-secondary); color: var(--text-color-secondary)";
         productIngredientsButton.style = "border-bottom: 2px solid var(--text-color-primary); color: var(--text-color-primary)";
       }
+    }
+
+    function showImg(imgSelectorId, imgSrc){
+      let imgSelectors = document.getElementsByClassName("img-selector");
+      for (let i=0 ; i<imgSelectors.length ; i++){
+        console.log(imgSelectors[i]);
+        imgSelectors[i].style.backgroundColor = "var(--text-color-secondary)";
+      }
+      let imgSelector = document.getElementById(imgSelectorId);
+      imgSelector.style.backgroundColor = "var(--text-color-primary)";
+      let imgDisplay = document.getElementById("product-img-display");
+      imgDisplay.src = imgSrc;
     }
   </script>
   
