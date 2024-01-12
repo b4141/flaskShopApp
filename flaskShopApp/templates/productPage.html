@@ -3,27 +3,37 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/productPage.css') }}">
 
   <div class="product-wrapper">
+
     <div class="img-container">
-      <img width="300px" src="{{ url_for('static', filename='productImg/'+product.imgs[0]) }}" alt="product-image">
+      <img src="{{ url_for('static', filename='productImg/'+product.imgs[0]) }}" alt="product-image">
     </div>
+
     <div class="shop-info-container">
 
-      <div class="product-name">{{ product.name }}</div>
-
-      <div class="product-rating">
-        {% for n in range(1, product.rating+1) %}
-          <i class='bx bxs-star' style='color:var(--text-color-primary)'></i>
-        {% endfor %}
-        {% for n in range(5-product.rating) %}
-          <i class='bx bxs-star' style='color:var(--text-color-secondary)'></i>
-        {% endfor %}
+      <div class="general-info">
+        <div class="product-name">{{ product.name }}</div>
+        <div class="star-rating-wrapper">
+          <div class="star-rating">
+            {% for n in range(1, product.rating+1) %}
+              <i class='bx bxs-star' style='color:var(--text-color-primary)'></i>
+            {% endfor %}
+            {% for n in range(5-product.rating) %}
+              <i class='bx bxs-star' style='color:var(--text-color-secondary)'></i>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="product-description">{{ product.description }}</div>
+        <div class="voting-numbers">
+          ({{ product.reviewsNumber }} Reviews)
+        </div>
       </div>
 
-      <div class="product-price">{{ product.price }}</div>
-
-      <div class="buy-action">
-        <input type="number" step="1" min="0" max="100">
-        <button class="add-to-Cart">add to Cart</button>
+      <div class="buy-info">
+        <div class="product-price">{{ product.price }} $</div>
+        <div class="buy-action">
+          <input type="number" step="1" min="0" max="100" value="0">
+          <button class="add-to-Cart">Add To Cart</button>
+        </div>
       </div>
 
       <div class="product-full-description">{{ product.fullDescription }}</div>
