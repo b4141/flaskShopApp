@@ -22,7 +22,7 @@
             {% endfor %}
           </div>
         </div>
-        <div class="product-description">{{ product.description }}</div>
+        <div class="product-short-description">{{ product.description }}</div>
         <div class="voting-numbers">
           ({{ product.reviewsNumber }} Reviews)
         </div>
@@ -36,7 +36,14 @@
         </div>
       </div>
 
-      <div class="product-full-description">{{ product.fullDescription }}</div>
+      <div class="product-description">
+        <div class="product-description-menu">
+          <div id="product-description-button" class="product-description-menu-item description-selected" onclick="showDescription('description')">Description</div>
+          <div id="product-ingredients-button" class="product-description-menu-item" onclick="showDescription('ingredients')">Ingredients</div>
+        </div>
+        <div class="product-description-text" id="product-description">{{ product.fullDescription }}</div>
+        <div class="product-description-text" id="product-ingredients" style="display: none">{{ product.ingredients }}</div>
+      </div>
 
     </div>
 
@@ -45,6 +52,26 @@
   <script>
     function navigateToProductPage(productId){
       window.location.href=`${window.location.origin}/productPage/${productId}`
+    }
+
+    function showDescription(description){
+      let productDescription = document.getElementById("product-description");
+      let productIngredients = document.getElementById("product-ingredients");
+      let productDescriptionButton = document.getElementById("product-description-button");
+      let productIngredientsButton = document.getElementById("product-ingredients-button");
+      console.log(productDescription);
+      console.log(productIngredients);
+      if (description === "description"){
+        productDescription.style.display = "grid";
+        productIngredients.style.display = "none";
+        productDescriptionButton.style = "border-bottom: 2px solid var(--text-color-primary); color: var(--text-color-primary)";
+        productIngredientsButton.style = "border-bottom: 2px solid var(--text-color-secondary); color: var(--text-color-secondary)";
+      }else if(description === "ingredients"){
+        productDescription.style.display = "none";
+        productIngredients.style.display = "grid";
+        productDescriptionButton.style = "border-bottom: 2px solid var(--text-color-secondary); color: var(--text-color-secondary)";
+        productIngredientsButton.style = "border-bottom: 2px solid var(--text-color-primary); color: var(--text-color-primary)";
+      }
     }
   </script>
   

@@ -3,7 +3,6 @@
   margin-top: 5em;
   padding: 1em;
   grid-template-columns: 1fr 1fr;
-  // outline: 1px solid orange;
   gap: 3em;
 }
 
@@ -11,33 +10,30 @@
 .img-container {
   display: grid;
   place-items: center;
-  // outline: 1px solid black;
 }
 
 .img-container img {
-  // outline: 1px solid green;
+  border: 1px solid orange;
 }
 
 .shop-info-container {
-  // outline: 1px solid black;
   height: 75%;
   display: grid;
   place-items: center;
   background-color: var(--bg-prev-color);
   border-radius: var(--border-radius);
   height: 100%;
+  grid-template-rows: 1fr 1fr 1.5fr;
 }
 
 .general-info {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  // margin-top: 4em;
   height: 4em;
   width: 90%;
 }
 
 .general-info div {
-  // outline: 1px solid orange;
   padding-right: 1em;
 }
 
@@ -49,7 +45,7 @@
   place-items: center;
 }
 
-.product-description {
+.product-short-description {
   color: var(--text-color-secondary);
   display: grid;
   justify-content: start;
@@ -89,12 +85,7 @@
   display: grid;
   place-items: center;
   grid-template-columns: 1.5fr 1fr;
-  // background-color: orange;
   width: 90%;
-}
-
-.buy-info div {
-  // outline: 1px solid red;
 }
 
 .product-price {
@@ -145,9 +136,38 @@
   outline: 1px solid var(--text-color-primary);
 }
 
-.product-full-description {
+.product-description {
+  width: 90%;
+  height: 100%;
+  // align-content: start;
+  margin-top: 3em;
+}
+
+.product-description-menu {
+  display: grid;
+  // place-items: center;
+  color: var(--text-color-secondary);
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin-bottom: 0.5em;
+}
+
+.product-description-menu-item {
+  width: 80%;
+  border-bottom: 2px solid var(--bg-prev-color);
+  border-bottom: 2px solid var(--text-color-secondary);
+  padding-bottom: 0.2em;
+  cursor: pointer;
+}
+
+.product-description-text {
   width: 90%;
   display: grid;
-  place-items: center;
+  // place-items: center;
   color: var(--text-color-secondary);
+}
+
+.description-selected {
+  color: var(--text-color-primary);
+  border-bottom: 2px solid var(--text-color-primary);
 }
