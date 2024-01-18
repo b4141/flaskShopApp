@@ -11,6 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/> 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cart.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/leaf-solid-24.png') }}">
 
   </head>
@@ -20,14 +21,14 @@
       <div class="navbar-container">
         <div class="logo-container">
           <a href="{{ url_for('index') }}">
-            <i class='bx bxs-leaf'></i>
+            <i class='bx bxs-leaf' style='color: var(--text-color-primary)'></i>
           </a>
         </div>
         <div class="search-bar-container">
           <input type="text" placeholder="&#xF002;  search for any product..." style="font-family: Roboto, FontAwesome">
         </div>
         <div class="cart-container">
-          <div class="cart-wrapper">
+          <div class="cart-wrapper" onclick="showCart(event)">
             <i class='bx bxs-shopping-bag'></i>
           </div>
         </div>
@@ -36,10 +37,89 @@
         {% block content %}{% endblock content %}
       </div>
     </div>
+    <div id="cart-menu-container" onclick="if (event.target === event.currentTarget){hideCart(event)}">
+      <div id="cart-menu-wrapper">
+        <p class="cart-title">My cart</p>
+        <div class="cart-products" id="cart-products">
+        </div>
+      </div>
+    </div>
 
-    <!--
     <script>
+      let cart_hidden = true;
+      function showCart(event){
+        let cart_menu_container = document.getElementById("cart-menu-container");
+        cart_menu_container.style.display = "block";
+        cart_hidden = false;
+        let cartItems = JSON.parse(localStorage.getItem("myCart"))["items"];
+
+        let cart_products = document.getElementById("cart-products");
+        cart_products.innerHTML = "";
+
+        //___TODO___if_cart_content_is_older_then_1_day
+        for (let i=0 ; i<cartItems.length ; i++){
+          let url = `/productInfo/${cartItems[i].id}`;
+          fetch(url).then(function(response){
+            return response.json();
+          }).then(function(productData){
+            if(productData === null){ return }
+            appendProductInCart(productData, cartItems[i].quantity);
+          }).catch(function(err){
+            console.log('Fetch Error :-S', err)
+          });
+        }
+      }
+
+      function hideCart(event){
+        let cart_menu_container = document.getElementById("cart-menu-container")
+        cart_menu_container.style.display = "none";
+        cart_hidden = true;
+      }
+
+      function toggleShowHideCart(){
+        let cart_menu_container = document.getElementById("cart-menu-container")
+        if (cart_hidden){
+          showCart();
+        }else{
+          hideCart();
+        }
+      }
+
+      function renderProductInCart(product){
+        // document.getElementById
+      }
+
+      function appendProductInCart(product, quantity){
+        let productHtml = `
+          <div class="cart-product" id="cart-product-id-${product.id}">
+            <div class="remove-cart-product"><i class='bx bxs-trash-alt'></i></div>
+            <div class="cart-product-img">
+              <img src="${window.location.origin}/static/productImg/${product.imgs[0]}" alt="product-img">
+            </div>
+            <div class="cart-product-info">
+              <div class="cart-product-name">${product.name}</div>
+              <div class="cart-product-description">${product.description}</div>
+              <div class="cart-product-buy-info">
+                <div class="cart-product-price">$ ${product.price}</div>
+                <div class="cart-product-quantity-wrapper">
+                  <div class="cart-product-quantity-control cart-product-quantity-decrease"><i class='bx bx-minus'></i></div>
+                  <div class="cart-product-quantity-display">${quantity}</div>
+                  <div class="cart-product-quantity-control cart-product-quantity-increase"><i class='bx bx-plus'></i></div>
+                </div>
+              </div>
+            </div>
+          </div>          
+        `;
+        let cart_products = document.getElementById("cart-products");
+        cart_products.innerHTML += productHtml;
+      }
+
+
+      hideCart();
+      // showCart();
+
     </script>
+    <!--
     <script src="{{ url_for('static', filename='js/') }}"></script>
     -->
   </body>

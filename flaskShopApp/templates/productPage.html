@@ -70,8 +70,7 @@
       let productIngredients = document.getElementById("product-ingredients");
       let productDescriptionButton = document.getElementById("product-description-button");
       let productIngredientsButton = document.getElementById("product-ingredients-button");
-      console.log(productDescription);
-      console.log(productIngredients);
+
       if (description === "description"){
         productDescription.style.display = "grid";
         productIngredients.style.display = "none";
@@ -88,7 +87,7 @@
     function showImg(imgSelectorId, imgSrc){
       let imgSelectors = document.getElementsByClassName("img-selector");
       for (let i=0 ; i<imgSelectors.length ; i++){
-        console.log(imgSelectors[i]);
+
         imgSelectors[i].style.backgroundColor = "var(--text-color-secondary)";
       }
       let imgSelector = document.getElementById(imgSelectorId);

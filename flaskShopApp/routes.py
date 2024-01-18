@@ -27,6 +27,14 @@ def productPage(productId):
 
 
 
+@app.route("/productInfo/<productId>")
+def productInfo(productId):
+    #search_product_by_id
+    for product in allProducts:
+        if product["id"] == productId:
+            return jsonify(product)
+    return jsonify(None)
+
 
 
 
@@ -36,6 +44,7 @@ def productPage(productId):
 allProducts = [
     {
         "id": "1",
+        "available": True,
         "name": "ANASTASIA",
         "description": "Eyelash Mascara",
         "imgs": ["p1-1.png"],
@@ -47,6 +56,7 @@ allProducts = [
     },
     {
         "id": "2",
+        "available": True,
         "name": "HOURGLASS",
         "description": "Body Cream",
         "imgs": ["p2-1.png", "p2-1.png", "p2-1.png"],
@@ -58,6 +68,7 @@ allProducts = [
     },
     {
         "id": "3",
+        "available": True,
         "name": "stila",
         "description": "Eye Liner",
         "imgs": ["p3-1.png"],
@@ -69,6 +80,7 @@ allProducts = [
     },
     {
         "id": "4",
+        "available": True,
         "name": "Unlocked",
         "description": "Instant Extensions Mascara from HOURGLASS",
         "imgs": ["p4-1.png", "p4-2.png"],
@@ -80,6 +92,7 @@ allProducts = [
     },
     {
         "id": "5",
+        "available": True,
         "name": "product 5",
         "description": "this is product number 5",
         "imgs": ["p5-1.png"],
@@ -91,6 +104,7 @@ allProducts = [
     },
     {
         "id": "6",
+        "available": True,
         "name": "product 6",
         "description": "this is product number 6",
         "imgs": ["p6-1.png"],
@@ -102,6 +116,7 @@ allProducts = [
     },
     {
         "id": "7",
+        "available": True,
         "name": "product 7",
         "description": "this is product number 7",
         "imgs": ["p7-1.png"],
@@ -113,6 +128,7 @@ allProducts = [
     },
     {
         "id": "8",
+        "available": True,
         "name": "product 8",
         "description": "this is product number 8",
         "imgs": ["p8-1.png"],
@@ -124,6 +140,7 @@ allProducts = [
     },
     {
         "id": "9",
+        "available": True,
         "name": "product 9",
         "description": "this is product number 9",
         "imgs": ["p9-1.png"],
@@ -135,6 +152,7 @@ allProducts = [
     },
     {
         "id": "10",
+        "available": True,
         "name": "product 10",
         "description": "this is product number 10",
         "imgs": ["p10-1.png"],
@@ -146,6 +164,7 @@ allProducts = [
     },
     {
         "id": "11",
+        "available": True,
         "name": "product 11",
         "description": "this is product number 11",
         "imgs": ["p4-1.png"],
